@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/zhufen.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+</head>
+
+<body>
+    <!-- header头部  HTML5新增的标签，头部header,底部 footer  main主体
+      设计稿的尺寸
+    +iphone5  320*568  DPR:2.0   尺寸 640*1136
+    +iphone6   375*667  DPR：2.0 尺寸 750*1334(最常用)
+     +iphone5  414*736  DPR:3.0   尺寸 1242*2208 -->
+    <header>
+        <h1 class="logo">
+            <a href="#"></a>
+        </h1>
+        <div class="menu">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+    </header>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="imo/ba.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="imo/ba.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="imo/ba.jpg" alt=""></a></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <main class="content">
+        <section class="item">
+            <div class="pic">
+                <img src="imo/banner111.jpg" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">js实战到理论</p>
+                <p class="price">100</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="imo/banner111.jpg" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">js实战到理论</p>
+                <p class="price">100</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="imo/banner111.jpg" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">js实战到理论</p>
+                <p class="price">100</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="imo/banner111.jpg" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">js实战到理论</p>
+                <p class="price">100</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="imo/banner111.jpg" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">js实战到理论</p>
+                <p class="price">100</p>
+            </div>
+        </section>
+    </main>
+    <!-- 引入动态判断rem的脚本 -->
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript">
+        // 动态判断rem的大小
+        function refreshRem() {
+            var desW = 750,
+                winW = document.documentElement.clientWidth,
+                ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio * 100 + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: true,
+            }
+
+        })        
+    </script>
+</body>
+
+</html>
